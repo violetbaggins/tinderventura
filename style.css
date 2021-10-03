@@ -1,0 +1,309 @@
+/* colores */
+/* rosa ff216d / Naranjita ff6950 */
+/* color texto: f9c782  // azul: #4048a1*/
+
+@font-face { font-family: Benguiat, Georgia; src: url('/font/Benguiat.ttf'); } 
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #333; */
+    position: relative;
+    
+    background: linear-gradient(90deg, rgba(255,33,109,1) 0%, rgba(255,105,80,1) 100%);
+}
+.heart{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img/heart.png');
+    background-repeat: repeat;
+    opacity: 0.1;
+    background-position: center;
+    z-index: -1;
+    
+}
+
+
+/* estilos chat */
+.container-general{
+    width: 60vw;
+    margin: 20px auto;
+    /* border: turquoise 1px solid; */
+}
+.container-general h3 {
+    font-family: Benguiat, Georgia;
+    color: white;
+    text-align: right;
+    margin: 5px;
+}
+.container-general h1 {
+    font-family: Benguiat, Georgia;
+    color: white;
+    text-align: right;
+    margin: 5px;
+}
+
+#chat-title{
+    background-color: #4048a1;
+    color: white;
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 10px 3px rgba(141, 10, 56, 0.5);
+}
+.container-chattext{
+    
+    min-height: 50vh;
+    max-height: 60vh;
+    
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid white;
+   
+    overflow-y: scroll;
+    box-shadow: 0 -1 10px 3px rgba(141, 10, 56, 0.5);
+}
+.container{
+    
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ff6950;
+    margin-top: 5px;
+   
+    box-shadow: 0 0 10px 3px rgba(141, 10, 56, 0.5);
+    
+}
+.chat-title-left{
+    font-family: Benguiat, Georgia;
+    display: flex;
+    align-items: center;
+    
+    /* border: red 1px solid; */
+}
+
+.chat-title-left img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 10px 0 5px;
+}
+
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 5px;
+}
+.btn{
+    background-color: #4048a1;
+    border: solid 1px #272e77;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+.btn:hover{
+    border-color: black;
+}
+
+
+.txt-match{
+    background-color: hsl(0, 0%, 90%);
+    padding: 10px 12px 10px 12px;
+    border-radius: 20px 20px 20px 0;
+    color: black;
+    display: inline-block;
+    
+}
+
+.txt-user{
+  
+    background: linear-gradient(90deg, rgba(255,33,109,1) 0%, rgba(255,105,80,1) 100%);
+    padding: 10px 12px 10px 12px;
+    border-radius: 20px 20px 0 20px;
+    color: white;
+    float: right;
+}
+.send-meme{
+    text-align: right;
+}
+.send-meme img{
+    border-radius: 5px;
+}
+.receive-meme img{
+    border-radius: 5px;
+}
+
+/* INICIO Y FINALES */
+
+.black-screen{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: wheat;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.black-screen-hidden{
+    display: none;
+}
+.modal{
+    background-color: #fff;
+    text-align: center;
+    width: 300px;
+    max-height: fit-content;
+    padding: 20px;
+    border-radius: 5px;
+    border: rgba(255,33,109,1) solid 1px
+}
+.modal-inicio{
+    background-color: #fff;
+    text-align: center;
+    width: 50vw;
+    max-height: fit-content;
+    padding: 20px;
+    border-radius: 5px;
+    border: rgba(255,33,109,1) solid 1px
+}
+.modal p{
+    font-family: Benguiat, Georgia;
+    color: #272e77;
+}
+
+#emoji-final{
+    font-size: 4rem;
+    margin: 0;
+}
+.titulo-home{
+    font-family: Benguiat, Georgia;
+    color: #4048a1;
+    font-size: 1.5rem;
+    
+}
+.text-info-titulos{
+    font-family: Benguiat, Georgia;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ff216d;
+    margin: 5px 0;
+}
+.aviso{
+    font-size: 1.1rem;
+    color: #ff216d;
+    margin: 5px 0;
+}
+.text-info{
+    font-family: Benguiat, Georgia;
+    font-size: 0.9rem;
+    color: #4048a1;
+    line-height: 1.5rem;
+    margin: 5px 0;
+}
+.text-info a{
+    font-family: Benguiat, Georgia;
+    font-size: 0.9rem;
+    color: #ff216d;
+    line-height: 1.5rem;
+    text-decoration: none;
+    margin: 5px 0;
+}
+.author{
+    text-align: center;
+    font-size: 0.9rem;
+    color: #f7b5cc;
+}
+.author a{
+    color: #f8e3ea;
+}
+
+ 
+/* ------------------------------------- mobile 768 .....----------------------------------------*/
+@media (max-width: 768px) { 
+
+    /* ESTILOS CHAT MOBILE */
+    .btn-grid{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+        margin-top: 5px;
+    }
+    .btn{
+        
+        border-radius: 5px;
+        padding: 5px 10px;
+        color: white;
+        outline: none;
+    }
+    .btn:hover{
+        border-color: black;
+    }
+    .modal-inicio{
+        background-color: #fff;
+        text-align: center;
+        width: 70vw;
+        max-height: fit-content;
+        padding: 20px;
+        border-radius: 5px;
+        border: rgba(255,33,109,1) solid 1px
+    }
+    .container-general{
+        min-width: 70vw;
+        max-width: 70vw; 
+    }
+    .author{
+        font-size: 0.7rem;
+    }
+}
+ /* ------------------------------------- mobile 560 .....----------------------------------------*/
+@media (max-width: 560px) { 
+    .titulo-home{
+        font-size: 1rem;
+    }
+    .text-info-titulos{
+        font-size: 0.7rem;
+    }
+    .aviso{
+        font-size: 0.8rem;
+    }
+    .text-info{
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+    .text-info a{
+        font-size: 0.6rem;
+        line-height: 1rem;  
+    }
+    .container-general h3 {
+        font-size: 1rem;
+    }
+    .container-general h1 {
+        font-size: 1.5rem;
+    }
+    .author{
+        font-size: 0.7rem;
+    }
+}
